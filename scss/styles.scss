@@ -34,7 +34,7 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+$base-color: #010d52;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
@@ -45,8 +45,8 @@ $background-alt: #f2f2f5;
 $border: #dcd9d9;
 
 // Define text colors
-$heading: #374054;
-$text: #74808a;
+$heading: #021a4c;
+$text: #021f39;
 
 /*
     ---------------------
@@ -118,10 +118,20 @@ body {
                 margin: 0 0 15px 0;
             }
 
-            p {
+            p,
+            ul,
+            ol,
+            li {
                 color: $text;
                 font-size: 0.9em;
                 margin: 0;
+            }
+
+            ul,
+            ol,
+            li {
+                padding-left: 20px; /* Optional: Indent for better readability */
+                list-style: disc;  /* Optional: Define list style */
             }
         }
 
@@ -130,6 +140,7 @@ body {
         }
     }
 }
+
 
 @keyframes dropHeader {
   0% {
@@ -350,7 +361,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../images/lead-bg.svg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -458,6 +469,32 @@ footer {
         margin: 0;
     }
 }
+
+#impact {
+    padding: 75px 15px;
+    border-bottom: 1px solid $border;
+
+    h2 {
+        color: $heading;
+    }
+
+    p {
+        color: $text;
+        margin: 0;
+    }
+}
+
+#core {
+    padding: 50px 15px;
+    text-align: center;
+    border-bottom: 1px solid $border;
+    background: $background-alt;  // Set the same background color as experience
+
+    h2 {
+        color: $heading;
+    }
+}
+
 
 /*
     --------------------------------
@@ -653,6 +690,29 @@ footer {
 .project-image {
     float: left;
 }
+
+// .project {
+//     display: flex;
+//     align-items: center; /* Vertically center content */
+//     justify-content: flex-start; /* Align items horizontally */
+//     position: relative;
+//     height: 100%; /* Ensure the project container takes full available height */
+// }
+
+// .project-image {
+//     flex: 1; /* Allow the image to take up available space */
+//     overflow: hidden; /* Ensures content doesn't overflow */
+// }
+
+// .project-info {
+//     flex: 1; /* Allow text to take equal space */
+//     position: relative; /* Allow positioning within the container */
+//     padding: 15px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center; /* Vertically center the content inside */
+// }
+
 
 .project-info {
     position: absolute;
@@ -999,3 +1059,10 @@ footer {
     }
 
 }
+
+ul, ol, li {
+    color: $text;
+    font-size: inherit; // Inherit font size from parent
+    font-family: inherit;
+}
+
